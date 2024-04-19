@@ -43,7 +43,7 @@ class Product(Document):
     @staticmethod
     def not_supported_name(name):
         if name == "not_supported_name":
-            raise ValidationError("'not_supported_name' is not a valid name")
+            raise ValidationError("not_supported_name is not a valid name")
 
     name = StringField(required=True, unique=True, max_length=100, validation=not_supported_name)
     description = StringField(max_length=255)

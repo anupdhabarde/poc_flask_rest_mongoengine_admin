@@ -28,5 +28,5 @@ class OrderView(ModelView):
         OrderByItemFilter(column=Order.items, name="Items"),
     ]
     column_editable_list = ["status"]
-    page_size = 10
+    page_size = 20
     can_set_page_size = True

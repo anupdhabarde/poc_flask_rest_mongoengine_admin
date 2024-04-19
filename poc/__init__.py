@@ -28,6 +28,7 @@ def create_app(config=None):
         "flask_debugtoolbar.panels.route_list.RouteListDebugPanel",
         "flask_debugtoolbar.panels.profiler.ProfilerDebugPanel",
     )
+    app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
 
     admin = Admin(app, name="poc", template_mode="bootstrap3")
     admin.add_view(ModelView(Product))

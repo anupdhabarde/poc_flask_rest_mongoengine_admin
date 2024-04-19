@@ -18,6 +18,7 @@ class TestProduct:
             product.validate()
         assert excinfo.value.to_dict() == {"name": "not_supported_name is not a valid name"}
 
+    @pytest.mark.skip(reason="mongomock doesn't support unique constraints")
     def test_name_unique_constraint(self):
         """
         GIVEN:  A product with a name that already exists in the database
