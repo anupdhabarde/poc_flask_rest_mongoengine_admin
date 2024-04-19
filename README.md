@@ -1,0 +1,1 @@
+POC for using ODM, REST, FSM and Admin with Flask project.

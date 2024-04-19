@@ -1,0 +1,38 @@
+{
+    "name": "POC ODM, REST, FSM, Admin",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "features": {
+      "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+        "plugins": "ssh-agent",
+        "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+        "username": "root"
+      },
+      "ghcr.io/guiyomh/features/vim:0": {},
+      "ghcr.io/devcontainers/features/java:1": {
+        "javaVersion": "17"
+      }
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-azuretools.vscode-docker",
+          "GitHub.copilot",
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+          "eamodio.gitlens",
+          "oderwat.indent-rainbow",
+          "ms-python.isort",
+          "SonarSource.sonarlint-vscode",
+          "ms-python.black-formatter",
+          "GitHub.copilot-chat",
+          "ryanluker.vscode-coverage-gutters",
+          "redhat.vscode-yaml",
+          "tamasfe.even-better-toml"
+        ]
+      }
+    },
+    "postCreateCommand": "pipx install poetry==1.2.0 && poetry install --with dev"
+  }
+  
